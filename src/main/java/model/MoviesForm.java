@@ -1,17 +1,16 @@
 package main.java.model;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 public class MoviesForm {
-    @NotEmpty
+    @NotBlank(message = "Name can't be empty")
     private String name;
-    @NotEmpty
+    @NotBlank(message = "Surname can't be empty")
     private String surname;
-    @Min(18)
-    private int age;
-    @Size(max = 100)
+    @NotNull(message = "Age can't be empty")
+    @Min(value = 18, message = "Age must be greater than 18")
+    private Integer age;
+    @Size(min = 1, max = 100, message = "Length of movie must be more than 1 character and less than 100")
     private String favoriteMovie;
 
     public String getName() {
@@ -30,11 +29,11 @@ public class MoviesForm {
         this.surname = surname;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
