@@ -1,9 +1,17 @@
 package main.java.model;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 public class MoviesForm {
+    @NotEmpty
     private String name;
+    @NotEmpty
     private String surname;
+    @Min(18)
     private int age;
+    @Size(max = 100)
     private String favoriteMovie;
 
     public String getName() {
