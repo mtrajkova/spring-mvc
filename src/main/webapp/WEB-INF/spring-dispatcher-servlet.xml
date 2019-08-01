@@ -17,7 +17,7 @@
 
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/moviesForm"/>
+            <mvc:mapping path="/"/>
             <bean class="main.java.interceptor.DayBasedInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
