@@ -11,7 +11,15 @@
             <value>.jsp</value>
         </property>
     </bean>
+
     <context:component-scan base-package="main.java"/>
     <mvc:annotation-driven/>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/moviesForm"/>
+            <bean class="main.java.interceptor.DayBasedInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
 

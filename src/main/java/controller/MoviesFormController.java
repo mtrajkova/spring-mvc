@@ -1,7 +1,8 @@
-package main.java.controllers;
+package main.java.controller;
 
 import main.java.model.MoviesForm;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,13 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping(value = "/")
 public class MoviesFormController {
+
+    private static final String WELCOME_MESSAGE = "Welcome to Spring MVC";
+
+    @ModelAttribute
+    public void showWelcomeMessage(Model model) {
+        model.addAttribute("welcomeMessage", WELCOME_MESSAGE);
+    }
 
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView showMoviesForm() {

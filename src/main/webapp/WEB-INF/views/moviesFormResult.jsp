@@ -11,7 +11,8 @@
     <title>Movies form result</title>
 </head>
 <body>
-<b>Hello</b> ${result.name} ${result.surname}. We know you are ${result.age} years old and your favorite movie is ${result.favoriteMovie}!
-<h5>Bye bye.</h5>
+<h2>${welcomeMessage}</h2>
+<h5>Hello</h5> <b>${result.name} ${result.surname}</b>. We know you are <b>${result.age}</b> years old and your favorite
+movie is <b>${result.favoriteMovie}</b>! <h5>Bye bye.</h5>
 </body>
 </html>

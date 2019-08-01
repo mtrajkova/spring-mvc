@@ -5,6 +5,7 @@
     <title>Favorite movies form</title>
 </head>
 <body>
+<h2>${welcomeMessage}</h2>
 <form method="post" action="/">
 
     <form:errors path="moviesForm.*" cssStyle="color: #a94443;"/><br>
